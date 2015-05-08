@@ -6,6 +6,10 @@ using System.Web;
 
 namespace Observatory.Models
 {
+    /// <summary>
+    /// Interface for basic CRUD operation on a repository
+    /// </summary>
+    /// <typeparam name="T">Any DTO datatype</typeparam>
     public interface IRepository<T>
     {
         Task<int> Create(T obj);
