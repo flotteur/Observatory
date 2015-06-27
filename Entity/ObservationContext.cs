@@ -14,6 +14,8 @@ namespace Entity
 
         public virtual DbSet<User> Users { get; set; }
 
+        public virtual DbSet<Observation> Observation { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }

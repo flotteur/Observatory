@@ -1,9 +1,11 @@
-﻿using Observatory.Models;
+﻿using Entity;
+using Observatory.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace Observatory.Controllers
@@ -13,13 +15,22 @@ namespace Observatory.Controllers
         /// <summary>
         /// Repository for the obervation controller
         /// </summary>
-        private IRepository<object> repository;
+        private readonly IRepository<Observation> repository;
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="repository"></param>
-        public ObservationController(IRepository<object> repository)
+        public ObservationController()
+        {
+            this.repository = null;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="repository"></param>
+        public ObservationController(IRepository<Observation> repository)
         {
             this.repository = repository;
         }
@@ -31,9 +42,9 @@ namespace Observatory.Controllers
         }
 
         // GET: api/Observation/5
-        public string Get(int id)
+        public async Task<Observation> Get(int id)
         {
-            return "value";
+            return await this.repository.Get(id);
         }
 
         // POST: api/Observation
