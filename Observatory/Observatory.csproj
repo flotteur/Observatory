@@ -226,7 +226,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IAccountService.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\IRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Repository\ObservationRepository.cs" />

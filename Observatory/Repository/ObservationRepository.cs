@@ -3,6 +3,7 @@
     using Entity;
     using Models;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -34,7 +35,7 @@
         /// </summary>
         /// <param name="obj">The observation to create</param>
         /// <returns>The id of the new observation</returns>
-        public Task<int> Create(Observation obj)
+        public async Task<int> Create(Observation obj)
         {
             throw new NotImplementedException();
         }
@@ -44,7 +45,16 @@
         /// </summary>
         /// <param name="id">The id of the observation to delete</param>
         /// <returns>An awaitable task</returns>
-        public Task Delete(int id)
+        public async Task Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get all the observation
+        /// </summary>
+        /// <returns></returns>
+        public virtual async Task<IEnumerable<Observation>> Get()
         {
             throw new NotImplementedException();
         }
@@ -54,7 +64,7 @@
         /// </summary>
         /// <param name="id">The id of the observation</param>
         /// <returns>The observation</returns>
-        public Task<Observation> Get(int id)
+        public async Task<Observation> Get(int id)
         {
             throw new NotImplementedException();
         }
@@ -64,7 +74,7 @@
         /// </summary>
         /// <param name="obj">The updated observation</param>
         /// <returns>An awaitable task</returns>
-        public Task Update(Observation obj)
+        public async Task Update(Observation obj)
         {
             throw new NotImplementedException();
         }

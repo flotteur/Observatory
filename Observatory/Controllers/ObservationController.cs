@@ -21,24 +21,15 @@ namespace Observatory.Controllers
         /// 
         /// </summary>
         /// <param name="repository"></param>
-        public ObservationController()
-        {
-            this.repository = null;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="repository"></param>
         public ObservationController(IRepository<Observation> repository)
         {
             this.repository = repository;
         }
 
         // GET: api/Observation
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<Observation>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await Task.FromResult(new Observation[] { });
         }
 
         // GET: api/Observation/5
